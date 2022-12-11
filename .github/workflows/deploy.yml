@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: build
+          path: ./public
   deploy:
     needs: build
     permissions:
